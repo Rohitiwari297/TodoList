@@ -2,8 +2,7 @@ import AddTodo from "./components/AddTodo/AddTodo";
 import TodoList from "./components/TodoList/TodoList";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
-import { addTodo, editTodo, todoFinished, deleteTodo } from "./actions/todoAction";
-
+import todoReducer, {addTodo, editTodo, deleteTodo, todoFinished} from './slices/todoSlice'
 function App() {
 
   //creating dispatch method
@@ -16,5 +15,6 @@ function App() {
       </>
   );
 }
+import { formatProdErrorMessage } from "@reduxjs/toolkit";
 
 export default App;

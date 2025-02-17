@@ -15,7 +15,7 @@ function AddTodo({addTodo}){
             />
             <button onClick={() => {
                 //updateList(inputText);
-                addTodo(inputText)
+                addTodo({todoText: inputText})
                 setInputText('')
             }}> Add </button>
         </div>
